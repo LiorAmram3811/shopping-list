@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axiosInstance from "../api/axiosInstance";
 import { Category } from "../types/category";
 import useCartStore from "../store/cartStore";
+import { toast } from "react-toastify";
 
 type ProductFormProps = {
   onCategoriesLoaded: (categories: Category[]) => void;
@@ -29,6 +30,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ onCategoriesLoaded }) => {
     });
     setName("");
     setCategoryId("");
+    toast.success("Product added to cart!");
   };
 
   return (

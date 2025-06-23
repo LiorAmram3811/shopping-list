@@ -3,6 +3,7 @@ import { Product } from "../types/product";
 import useCartStore from "../store/cartStore";
 import { capitalize } from "../utils/capitalize";
 import { categoryBackgroundColor } from "../utils/categoryBackgroundColor";
+import { toast } from "react-toastify";
 
 type ProductItemProps = {
   product: Product;
@@ -24,7 +25,10 @@ const ProductItem: React.FC<ProductItemProps> = ({ product, categoryName }) => {
       removeProduct(product);
     }
   };
-  const handleRemove = () => removeProduct(product);
+  const handleRemove = () => {
+    removeProduct(product);
+    toast.info("Product removed from cart");
+  };
 
   return (
     <li className="list-group-item border-0 mb-2 p-0 bg-transparent">

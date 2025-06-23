@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axiosInstance from "../api/axiosInstance";
 import { Product } from "../types/product";
+import { toast } from "react-toastify";
 
 type SubmitButtonProps = {
   items: Product[];
@@ -16,8 +17,9 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({ items, onSuccess }) => {
     try {
       await axiosInstance.post("/cart", { items });
       onSuccess();
+      toast.success("Order submitted!");
     } catch (error) {
-      alert("Error submitting the cart");
+      toast.error("Error submitting the cart");
     } finally {
       setLoading(false);
     }
