@@ -32,29 +32,51 @@ const ProductForm: React.FC<ProductFormProps> = ({ onCategoriesLoaded }) => {
   };
 
   return (
-    <div className="d-flex gap-2 my-3">
-      <input
-        className="form-control"
-        type="text"
-        placeholder="Product name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <select
-        className="form-select"
-        value={categoryId}
-        onChange={(e) => setCategoryId(e.target.value)}
-      >
-        <option value="">Select category</option>
-        {categories.map((cat) => (
-          <option key={cat.id} value={cat.id}>
-            {cat.name}
-          </option>
-        ))}
-      </select>
-      <button className="btn btn-primary" onClick={handleAdd}>
-        Add
-      </button>
+    <div className="bg-white p-4 rounded shadow-sm mb-4">
+      <div className="row g-2 align-items-end">
+        <div className="col-12 col-md-5">
+          <label className="form-label" htmlFor="productName">
+            Product Name
+          </label>
+          <input
+            id="productName"
+            className="form-control"
+            type="text"
+            placeholder="Enter product name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            autoComplete="off"
+          />
+        </div>
+        <div className="col-12 col-md-5">
+          <label className="form-label" htmlFor="categorySelect">
+            Category
+          </label>
+          <select
+            id="categorySelect"
+            className="form-select"
+            value={categoryId}
+            onChange={(e) => setCategoryId(e.target.value)}
+          >
+            <option value="">Select category</option>
+            {categories.map((cat) => (
+              <option key={cat.id} value={cat.id}>
+                {cat.name}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="col-12 col-md-2 d-grid">
+          <button
+            className="btn btn-primary fw-bold rounded shadow-sm"
+            onClick={handleAdd}
+            disabled={!name.trim() || !categoryId}
+          >
+            <i className="bi bi-plus-lg me-1"></i>
+            Add
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

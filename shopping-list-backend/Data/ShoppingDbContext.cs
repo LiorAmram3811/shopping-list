@@ -18,10 +18,10 @@ namespace shopping_list_backend.Data
             // Seed categories
             modelBuilder.Entity<Category>().HasData(
             new Category { Id = 1, Name = "Cleaning Products" },
-            new Category { Id = 2, Name = "Cheeses" },
+            new Category { Id = 2, Name = "Dairy" },
             new Category { Id = 3, Name = "Fruits and Vegetables" },
             new Category { Id = 4, Name = "Meat and Fish" },
-            new Category { Id = 5, Name = "Baked Goods" }
+            new Category { Id = 5, Name = "Bakery" }
             );
         }
     }

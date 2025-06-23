@@ -18,19 +18,23 @@ const ProductList: React.FC<ProductListProps> = ({ items, categories }) => {
   );
 
   return (
-    <ul className="list-group mb-3">
-      {items.length === 0 ? (
-        <li className="list-group-item text-center">No products added</li>
-      ) : (
-        items.map((item, idx) => (
-          <ProductItem
-            key={idx}
-            product={item}
-            categoryName={categoryIdToName[item.categoryId]}
-          />
-        ))
-      )}
-    </ul>
+    <div className="bg-white p-4 rounded shadow-sm mb-4">
+      <ul className="list-group list-group-flush">
+        {items.length === 0 ? (
+          <li className="list-group-item text-center border-0">
+            No products added yet
+          </li>
+        ) : (
+          items.map((item, idx) => (
+            <ProductItem
+              key={idx}
+              product={item}
+              categoryName={categoryIdToName[item.categoryId]}
+            />
+          ))
+        )}
+      </ul>
+    </div>
   );
 };
 

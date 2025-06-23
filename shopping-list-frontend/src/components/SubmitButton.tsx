@@ -24,13 +24,17 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({ items, onSuccess }) => {
   };
 
   return (
-    <button
-      className="btn btn-success w-100"
-      onClick={handleSubmit}
-      disabled={loading || items.length === 0}
-    >
-      {loading ? "Submitting..." : "Submit Order"}
-    </button>
+    <div className="mb-4">
+      <button
+        className="btn btn-success w-100 fw-bold rounded-pill shadow-sm d-flex justify-content-center align-items-center gap-2"
+        onClick={handleSubmit}
+        disabled={loading || items.length === 0}
+        style={{ minHeight: 48, fontSize: "1.1rem" }}
+      >
+        <i className="bi bi-send"></i>
+        {loading ? "Submitting..." : "Submit Order"}
+      </button>
+    </div>
   );
 };
 
