@@ -1,0 +1,26 @@
+# Node.js (React client)
+node_modules/
+build/
+dist/
+.env
+
+# .NET/ASP.NET Core (server)
+bin/
+obj/
+.vs/
+wwwroot/
+app.publish/
+publish/
+
+# General IDE/project files
+.vscode/
+.idea/
+*.log
+*.DS_Store
+Thumbs.db
+
+# Test coverage
+coverage/
+
+# Logs
+logs/
