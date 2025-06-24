@@ -37,13 +37,6 @@ The app demonstrates best practices in both **React (TypeScript)** and **ASP.NET
 
 - SQL Server (localdb)
 
-## 📂 Project Structure
-
-- shopping-list-backend/ # ASP.NET Core API (server)
-- shopping-list-frontend/ # React app (client)
-
----
-
 ## Quick Start
 
 ### 1. Clone the repository
@@ -60,12 +53,22 @@ cd shopping-list-backend
 # Restore packages
 dotnet restore
 
+# If you don't have dotnet-ef installed
+dotnet tool install --global dotnet-ef
+
+# Make sure to update the server and database name in your appsettings.json file, if needed.
+
 # Create the database (if not exists)
 dotnet ef database update
 
 # Run the API
 dotnet run
 ```
+
+> **Tip:**  
+> For local development, it is recommended to run the backend on HTTP (not HTTPS) to avoid CORS and SSL issues when calling the API from React.
+
+(Bonus: Once the backend is running, open http://localhost:5115/swagger/index.html in your browser to explore the API with Swagger UI.)
 
 By default the API runs on https://localhost:5001
 Change the connection string in appsettings.json if needed.
@@ -98,13 +101,3 @@ dotnet ef database update
 ```
 
 Make sure SQL Server (or LocalDB) is installed and running.
-
-## Technologies and Libraries Used
-
-### Frontend:
-
-React, TypeScript, Bootstrap 5, Bootstrap Icons, Zustand, React Hook Form, Yup, React Toastify, Axios
-
-### Backend:
-
-ASP.NET Core 8, C#, Entity Framework Core, SQL Server
