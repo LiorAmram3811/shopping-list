@@ -68,7 +68,8 @@ dotnet run
 > **Tip:**  
 > For local development, it is recommended to run the backend on HTTP (not HTTPS) to avoid CORS and SSL issues when calling the API from React.
 
-(Bonus: Once the backend is running, open http://localhost:5115/swagger/index.html in your browser to explore the API with Swagger UI.)
+> **Bonus**
+> Once the backend is running, open http://localhost:5115/swagger/index.html in your browser to explore the API with Swagger UI.
 
 By default the API runs on https://localhost:5001
 Change the connection string in appsettings.json if needed.
