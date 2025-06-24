@@ -1,6 +1,9 @@
 import { create } from "zustand";
 import { Product } from "../types/product";
-
+/**
+ * Global cart store (Zustand)
+ * - Manages product list and quantity updates
+ */
 type CartStore = {
   cartItems: Product[];
   addProduct: (item: Product) => void;

@@ -5,6 +5,10 @@ using shopping_list_backend.Services;
 
 namespace shopping_list_backend.Controllers
 {
+    /// <summary>
+    /// Handles submit shopping cart items.
+    /// Saves the cart items to the database.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class CartController : ControllerBase

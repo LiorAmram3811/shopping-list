@@ -1,6 +1,6 @@
 ﻿namespace shopping_list_backend.Models
 {
-    // פריט בודד ברשימת הקניות
+    // A single item in the shopping list
     public class ShoppingItem
     {
         public int Id { get; set; }

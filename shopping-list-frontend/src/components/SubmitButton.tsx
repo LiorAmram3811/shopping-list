@@ -8,6 +8,11 @@ type SubmitButtonProps = {
   onSuccess: () => void;
 };
 
+/**
+ * SubmitButton component
+ * - Submits the shopping cart to the backend.
+ * - Shows loading state and disables if the cart is empty.
+ */
 const SubmitButton: React.FC<SubmitButtonProps> = ({ items, onSuccess }) => {
   const [loading, setLoading] = useState(false);
 

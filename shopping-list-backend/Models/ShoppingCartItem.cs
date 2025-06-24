@@ -1,6 +1,7 @@
 ﻿namespace shopping_list_backend.Models
 {
-    // פריט מסוים בסל קניות. כלומר: איזה מוצר, מאיזה סל, ובאיזו כמות .
+    // A specific item in the shopping cart;
+    // meaning: which product, from which cart, and in what quantity.
     public class ShoppingCartItem
     {
         public int Id { get; set; }

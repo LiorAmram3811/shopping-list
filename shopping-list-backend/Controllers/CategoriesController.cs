@@ -4,6 +4,9 @@ using shopping_list_backend.Data;
 
 namespace shopping_list_backend.Controllers
 {
+    /// <summary>
+    /// Responsible for getting categories in the shopping list application from the DB.
+    /// </summary>
     [ApiController]
     [Route("api/[controller]")]
     public class CategoriesController : ControllerBase

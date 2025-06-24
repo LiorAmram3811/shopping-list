@@ -1,6 +1,6 @@
 ﻿namespace shopping_list_backend.Models
 {
-    // עגלת קניות
+    // Shopping cart
     public class ShoppingCart
     {
         public int Id { get; set; }

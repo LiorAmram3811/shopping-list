@@ -5,6 +5,9 @@ using shopping_list_backend.Models.Dtos;
 
 namespace shopping_list_backend.Services
 {
+    /// <summary>
+    /// manages shopping cart logic such as saving a cart.
+    /// </summary>
     public class ShoppingCartService : IShoppingCartService
     {
         private readonly ShoppingDbContext _context;

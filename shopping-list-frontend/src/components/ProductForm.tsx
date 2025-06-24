@@ -15,7 +15,11 @@ type ProductFormData = {
   name: string;
   categoryId: number;
 };
-
+/**
+ * ProductForm component
+ * - Handles product addition with client-side validation (Yup + react-hook-form)
+ * - Loads categories from API on mount
+ */
 const ProductForm: React.FC<ProductFormProps> = ({ onCategoriesLoaded }) => {
   const [categories, setCategories] = useState<Category[]>([]);
   const addProduct = useCartStore((state) => state.addProduct);

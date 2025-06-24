@@ -10,6 +10,11 @@ type ProductItemProps = {
   categoryName: string;
 };
 
+/**
+ * ProductItem component
+ * - Displays a single product in the cart, with quantity controls and a delete option.
+ * - Handles increase, decrease, and remove actions.
+ */
 const ProductItem: React.FC<ProductItemProps> = ({ product, categoryName }) => {
   const updateProductQuantity = useCartStore(
     (state) => state.updateProductQuantity

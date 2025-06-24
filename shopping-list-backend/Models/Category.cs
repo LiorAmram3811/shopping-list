@@ -1,6 +1,6 @@
 ﻿namespace shopping_list_backend.Models
 {
-    // קטגוריה של פריטים ברשימת קניות
+    // A category of items in the shopping list.
     public class Category
     {
         public int Id { get; set; }

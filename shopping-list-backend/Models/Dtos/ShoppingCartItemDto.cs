@@ -2,6 +2,10 @@
 
 namespace shopping_list_backend.Models.Dtos
 {
+    /// <summary>
+    /// Data Transfer Object for shopping cart items.
+    /// Used to receive and send product data between the backend API and the frontend.
+    /// </summary>
     public class ShoppingCartItemDto
     {
         [Required]

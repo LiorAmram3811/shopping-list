@@ -5,6 +5,10 @@ type TotalItemsProps = {
   items: Product[];
 };
 
+/**
+ * TotalItems component
+ * - Shows the total quantity of items in the shopping cart.
+ */
 const TotalItems: React.FC<TotalItemsProps> = ({ items }) => {
   const total = items.reduce((sum, item) => sum + item.quantity, 0);
 

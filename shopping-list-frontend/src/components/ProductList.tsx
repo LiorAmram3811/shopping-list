@@ -8,6 +8,11 @@ type ProductListProps = {
   categories: Category[];
 };
 
+/**
+ * ProductList component
+ * - Displays all products currently in the cart.
+ * - Renders a ProductItem for each product.
+ */
 const ProductList: React.FC<ProductListProps> = ({ items, categories }) => {
   const categoryIdToName = categories.reduce<Record<number, string>>(
     (map, cat) => {
