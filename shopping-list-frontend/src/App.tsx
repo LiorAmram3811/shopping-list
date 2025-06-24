@@ -33,7 +33,7 @@ function App() {
         autoClose={2500}
         toastStyle={{ fontSize: "16px", minWidth: "400px", marginTop: "75px" }}
       />
-      <div className="container py-5" style={{ maxWidth: 600, minWidth: 320 }}>
+      <div className="container py-5" style={{ maxWidth: 680, minWidth: 320 }}>
         <h2 className="mb-4 text-center">
           <i className="bi bi-cart3 me-2"></i>
           Shopping List

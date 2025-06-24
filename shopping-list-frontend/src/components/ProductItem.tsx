@@ -23,6 +23,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ product, categoryName }) => {
       updateProductQuantity(product, product.quantity - 1);
     } else {
       removeProduct(product);
+      toast.info("Product removed from cart");
     }
   };
   const handleRemove = () => {
